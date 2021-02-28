@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### 1. 모험가 길드
-# - n명의 모험가
-# - 각 모험가의 '공포도'를 측정
-# - 공포도 x인 모함가는 반드시 x명 이상으로 구성된 모험가 그룹에 참여해야 도전 가능
-# - 도전할 수 있는 그룹 수의 최댓값을 출력
-# - 단 모든 모험가를 특정 그룹에 넣어야 할 필요는 없음
-
-# In[4]:
+### 1. 모험가 길드
+# n명의 모험가
+# 각 모험가의 '공포도'를 측정
+# 공포도 x인 모함가는 반드시 x명 이상으로 구성된 모험가 그룹에 참여해야 도전 가능
+# 도전할 수 있는 그룹 수의 최댓값을 출력
+# 단 모든 모험가를 특정 그룹에 넣어야 할 필요는 없음
 
 
 #기본 입력값들
@@ -29,12 +27,9 @@ for i in x: #모험가들에 대해서
 print(group)
 
 
-# ### 2. 곱하기? 더하기?
-# - 왼쪽부터 오른쪽까지 하나씩 모든 숫자를 확인하며 숫자 사이에 곱하기 혹은 더하기 연산자를 넣기
-# - 가능한 경우의 수 중 가장 큰 수를 구하는 프로그램 작성
-
-# In[3]:
-
+### 2. 곱하기? 더하기?
+# 왼쪽부터 오른쪽까지 하나씩 모든 숫자를 확인하며 숫자 사이에 곱하기 혹은 더하기 연산자를 넣기
+# 가능한 경우의 수 중 가장 큰 수를 구하는 프로그램 작성
 
 data = input()
 
@@ -55,9 +50,6 @@ print(result)
 # - 0 과 1로만 구성되어 있는 1,000,000보다 작은 문자열
 # - 1을 뒤집으면 0, 0을 뒤집으면 1 이 된다
 # - 연속된 하나 이상의 숫자를 잡고 모두 뒤집는 것만 가능하다
-
-# In[5]:
-
 
 data = input()
 count0 = 0
@@ -86,9 +78,6 @@ print(min(count0, count1))
 # - n개의 동전을 가지고 있음
 # - 이를 이용하여 만들 수 없는 양의 정수 금액 중 최솟값 구하는 프로그램
 
-# In[7]:
-
-
 n = int(input())
 data=list(map(int, input().split()))
 data.sort()
@@ -110,9 +99,6 @@ print(target)
 # - 같은 무게가 있을 수 있지만 다른 공으로 체크됨
 # - 두 사람이 볼링공을 고르는 경우의 수 구하는 프로그램
 
-# In[9]:
-
-
 n, m = map(int, input().split())
 data = list(map(int, input().split()))
 
@@ -132,36 +118,18 @@ for i in range(1, m+1):
 print(result)
 
 
-# In[1]:
-
-
 ### 7. Lucky Straight
-
-
-# In[2]:
-
 
 n=input()
 length = len(n) #점수값의 총 자릿수
 summary = 0
 
-
-# In[ ]:
-
-
 for i in range(length // 2):
     summary += int(n[i])
 
 
-# In[ ]:
-
-
 for i in range(length // 2, length):
     summary -= int(n[i])
-
-
-# In[ ]:
-
 
 if summary ==0:
     print("LUCKY")
@@ -169,22 +137,12 @@ else:
     print("READY")
 
 
-# In[ ]:
-
 
 ### Character Re-Arranging
-
-
-# In[ ]:
-
 
 data=input()
 result=[]
 value = 0
-
-
-# In[ ]:
-
 
 for x in data:
     if x.isalpha():
@@ -192,22 +150,11 @@ for x in data:
     else:
         value += int(x)
 
-
-# In[ ]:
-
-
 result.sort()
-
-
-# In[ ]:
 
 
 if value != 0:
     result.append(str(value))
 
 
-# In[ ]:
-
-
 print(''.join(result))
-
